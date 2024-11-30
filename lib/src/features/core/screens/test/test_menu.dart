@@ -2,30 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../../../constants/text_strings.dart';
+import 'ModulesOf_test.dart';
 
-void main() {
-  runApp(JLPTTestApp());
-}
 
-class JLPTTestApp extends StatefulWidget {
-  @override
-  State<JLPTTestApp> createState() => _JLPTTestAppState();
-}
 
-class _JLPTTestAppState extends State<JLPTTestApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: TestPage(),
-    );
-  }
-}
+
 
 class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final txtTheme = Theme.of(context).textTheme;
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to the previous screen
+          },
+        ),
+
+        backgroundColor:const Color(0xFFD482E8),
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -71,18 +68,33 @@ class TestPage extends StatelessWidget {
                     shrinkWrap: true,
                     // Shrink GridView to fit content
                     children: [
-                      TestCard(
-                          icon: Iconsax.book_copy,
-                          label: 'Vocabulary',
-                          textStyle: txtTheme.titleMedium),
-                      TestCard(
-                          icon: Iconsax.grammerly_copy,
-                          label: 'Grammar',
-                          textStyle: txtTheme.titleMedium),
-                      TestCard(
-                          icon: Iconsax.book_square_copy,
-                          label: 'Reading',
-                          textStyle: txtTheme.titleMedium),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ModulesofTest()));
+                        },
+                        child: TestCard(
+                            icon: Iconsax.book_copy,
+                            label: 'Vocabulary',
+                            textStyle: txtTheme.titleMedium),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ModulesofTest()));
+                        },
+                        child: TestCard(
+                            icon: Iconsax.grammerly_copy,
+                            label: 'Grammar',
+                            textStyle: txtTheme.titleMedium),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ModulesofTest()));
+                        },
+                        child: TestCard(
+                            icon: Iconsax.book_square_copy,
+                            label: 'Reading',
+                            textStyle: txtTheme.titleMedium),
+                      ),
                       TestCard(
                           icon: Iconsax.audio_square_copy,
                           label: 'Listening',
