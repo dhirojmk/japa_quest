@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../../../constants/text_strings.dart';
-import 'ModulesOf_test.dart';
+import 'Vocabulary_Test/ModulesOf_vocabulary.dart';
 
 
 
@@ -28,7 +28,7 @@ class TestPage extends StatelessWidget {
           children: [
             // Background image
             Container(
-              height: 200,
+              height: 180,
               decoration: BoxDecoration(
                 image: const DecorationImage(
                   image: AssetImage('assets/images/Test BackGround.jpg'),
@@ -47,7 +47,7 @@ class TestPage extends StatelessWidget {
             ),
             // Content with padding
             Padding(
-              padding: const EdgeInsets.only(top: 200.0),
+              padding: const EdgeInsets.only(top: 180.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -95,10 +95,24 @@ class TestPage extends StatelessWidget {
                             label: 'Reading',
                             textStyle: txtTheme.titleMedium),
                       ),
-                      TestCard(
-                          icon: Iconsax.audio_square_copy,
-                          label: 'Listening',
-                          textStyle: txtTheme.titleMedium),
+                      InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>ModulesofTest()));
+                          },
+                        child: TestCard(
+                            icon: Iconsax.audio_square_copy,
+                            label: 'Listening',
+                            textStyle: txtTheme.titleMedium),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ModulesofTest()));
+                        },
+                        child: TestCard(
+                            icon: Iconsax.book_1_copy,
+                            label: 'Kanji',
+                            textStyle: txtTheme.titleMedium),
+                      ),
                     ],
                   ),
                   Padding(
@@ -156,10 +170,10 @@ class TestCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         color: const Color(0xFFF3E5F5),
-        borderRadius: BorderRadius.circular(12.0),
+        borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
@@ -172,8 +186,8 @@ class TestCard extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, size: 40, color: Colors.black),
-          SizedBox(height: 10),
+          Icon(icon, size: 35, color: Colors.black),
+          //SizedBox(height: 8),
           Text(
             label,
             style: textStyle?.copyWith(color: Colors.black),
@@ -194,7 +208,7 @@ class BottomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         color: const Color(0xFFF3E5F5),
         borderRadius: BorderRadius.circular(8.0),

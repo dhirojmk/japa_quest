@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:japa_quest/src/features/core/screens/test/Vocabulary_Test/testpage.dart';
 
 class ModulesofTest extends StatefulWidget {
   const ModulesofTest({super.key});
@@ -8,7 +9,6 @@ class ModulesofTest extends StatefulWidget {
 }
 
 class _ModulesofTestState extends State<ModulesofTest> {
-  // Sample data for the cards
   final List<Map<String, String>> testData = [
     {'title': 'Test 1', 'description': 'Actual test of previous years'},
     {'title': 'Test 2', 'description': 'Actual test of previous years'},
@@ -27,38 +27,39 @@ class _ModulesofTestState extends State<ModulesofTest> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context); // Navigate back to the previous screen
+            Navigator.pop(context);
           },
         ),
-
-        backgroundColor:const Color(0xFFD482E8),
+        backgroundColor: const Color(0xFFD482E8),
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(8.0),
         itemCount: testData.length,
         itemBuilder: (context, index) {
           final test = testData[index];
-          return Card(
-            margin: const EdgeInsets.symmetric(vertical: 8.0),
-            child: ListTile(
-              leading: const Icon(
-                Icons.library_books_sharp,
-                size: 40,
-                color: const Color(0xFFD482E8),
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Test()),
+              );
+            },
+            child: Card(
+              margin: const EdgeInsets.symmetric(vertical: 8.0),
+              child: ListTile(
+                leading: const Icon(
+                  Icons.library_books_sharp,
+                  size: 40,
+                  color: Color(0xFFD482E8),
+                ),
+                title: Text(
+                  test['title']!,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text(test['description']!),
               ),
-              title: Text(
-                test['title']!,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text(test['description']!),
-              onTap: () {
-                // Handle card tap if needed
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('${test['title']} tapped!'),
-                ));
-              },
             ),
           );
         },
