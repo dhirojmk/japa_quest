@@ -519,7 +519,7 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical:15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -527,15 +527,16 @@ class _DashboardState extends State<Dashboard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Icon(Icons.bookmark, color: Colors.black),
                         Image.asset(
                           tBannerImage1,
-                          width: 70,
-                          height: 70,
+                          width: 100,
+                          height: 100,
                         ),
+                        const Icon(Icons.bookmark, color: Colors.black),
+
                       ],
                     ),
-                    const SizedBox(height: 10),
+
                     Text(
                       tDashboardBannerTitle1,
                       style: txtTheme.titleMedium?.copyWith(color: Colors.black),
@@ -554,70 +555,71 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
             const SizedBox(width: tDashboardCardPadding),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                    colors: [
-                      const Color(0xFFF3E5F5),
-                      const Color(0xFFF3E5F5).withOpacity(0.7)
-                    ],
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                  ),
-                ),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Icon(Icons.bookmark, color: Colors.black),
-                        Image.asset(
-                          tOnBoardingImage3,
-                          width: 70,
-                          height: 70,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      tDashboardBannerTitle2,
-                      style: txtTheme.titleMedium?.copyWith(color: Colors.black),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      tDashboardBannerSubTitle,
-                      style: txtTheme.bodySmall
-                          ?.copyWith(color: Colors.black.withOpacity(0.7)),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            // Expanded(
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(10),
+            //       gradient: LinearGradient(
+            //         colors: [
+            //           const Color(0xFFF3E5F5),
+            //           const Color(0xFFF3E5F5).withOpacity(0.7)
+            //         ],
+            //         begin: Alignment.topRight,
+            //         end: Alignment.bottomLeft,
+            //       ),
+            //     ),
+            //     padding:
+            //         const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+            //     child: Column(
+            //       crossAxisAlignment: CrossAxisAlignment.start,
+            //       children: [
+            //         Row(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //           children: [
+            //             const Icon(Icons.bookmark, color: Colors.black),
+            //             Image.asset(
+            //               tOnBoardingImage3,
+            //               width: 70,
+            //               height: 70,
+            //             ),
+            //           ],
+            //         ),
+            //         const SizedBox(height: 10),
+            //         Text(
+            //           tDashboardBannerTitle2,
+            //           style: txtTheme.titleMedium?.copyWith(color: Colors.black),
+            //           overflow: TextOverflow.ellipsis,
+            //         ),
+            //         const SizedBox(height: 5),
+            //         Text(
+            //           tDashboardBannerSubTitle,
+            //           style: txtTheme.bodySmall
+            //               ?.copyWith(color: Colors.black.withOpacity(0.7)),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
+
           ],
         ),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 5),
-            child: TextButton(
-              onPressed: () {
-                // Add your onPressed action here
-              },
-              style: TextButton.styleFrom(
-                foregroundColor: Colors
-                    .blueAccent, // Use your primary color or a color of your choice
-              ),
-              child: const Text('More Details'),
-            ),
-          ),
-        ),
+        // Align(
+        //   alignment: Alignment.bottomRight,
+        //   child: Padding(
+        //     padding: const EdgeInsets.only(top: 5),
+        //     child: TextButton(
+        //       onPressed: () {
+        //         // Add your onPressed action here
+        //       },
+        //       style: TextButton.styleFrom(
+        //         foregroundColor: Colors
+        //             .blueAccent, // Use your primary color or a color of your choice
+        //       ),
+        //       child: const Text('More Details'),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
