@@ -2,25 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 void main() {
-  runApp(ProfilePageApp());
+  runApp(const ProfilePageApp());
 }
 
 class ProfilePageApp extends StatelessWidget {
+  const ProfilePageApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Color(0xFFD482E8),
+        primaryColor: const Color(0xFFD482E8),
         textTheme: txtTheme, // Apply the custom text theme
       ),
-      home: ProfilePage(),
+      home: const ProfilePage(),
       debugShowCheckedModeBanner: false, // Disable the debug banner
     );
   }
 }
 
 // Define the custom text theme
-final TextTheme txtTheme = TextTheme(
+const TextTheme txtTheme = TextTheme(
   headlineSmall: TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.bold,
@@ -38,6 +40,8 @@ final TextTheme txtTheme = TextTheme(
 );
 
 class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+
   @override
   State<ProfilePage> createState() => _ProfilePageState();
 }
@@ -84,7 +88,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   left: 20,
                   right: 20,
                   child: Container(
-                    padding: EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(16.0),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(16.0),
@@ -102,7 +106,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           radius: 50,
                           backgroundImage: AssetImage('assets/images/profile.jpg'), // Replace with your profile image
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           '@dhirojSahoo2000',
                           style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.black),
@@ -111,7 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           'Intermediate',
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey),
                         ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -123,7 +127,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ),
                         buildDivider(),
-                        Text(
+                        const Text(
                           ' 20 Courses Enrolled',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -139,10 +143,10 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
             // Add some space below the top section
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             // User Information Section
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -190,16 +194,16 @@ class _ProfilePageState extends State<ProfilePage> {
       children: [
         Text(
           number,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.blue,
           ),
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 14,
             color: Colors.grey,
           ),
@@ -209,7 +213,7 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Widget buildDivider() {
-    return Container(
+    return const SizedBox(
       height: 20,
       child: VerticalDivider(
         color: Colors.black,
@@ -224,7 +228,7 @@ class ProfileInfoRow extends StatelessWidget {
   final String title;
   final String subtitle;
 
-  ProfileInfoRow({
+  const ProfileInfoRow({super.key,
     required this.icon,
     required this.title,
     required this.subtitle,
@@ -237,7 +241,7 @@ class ProfileInfoRow extends StatelessWidget {
       child: Row(
         children: [
           Icon(icon, color: Colors.blue),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -246,7 +250,7 @@ class ProfileInfoRow extends StatelessWidget {
                   title,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.black),
                 ),
-                SizedBox(height: 2),
+                const SizedBox(height: 2),
                 Text(
                   subtitle,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey),

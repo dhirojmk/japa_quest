@@ -42,14 +42,14 @@ class TColors {
   //Error and validation Colors
   static const Color error = Color(0xFFD32F2F);
   static const Color success = Color(0xFF388E3C);
-  static const Color warning = Color(0xFF57C00);
+  static const Color warning = Color(0x0ff57c00);
   static const Color info = Color(0xFF1976D2);
 
   //Neutral shades
   static const Color black = Color(0xFF232323);
   static const Color darkerGray = Color(0xFF4F4F4F);
   static const Color darkGray = Color(0xFF939393);
-  static const Color Gray = Color(0xFFE0E0E0);
+  static const Color gray = Color(0xFFE0E0E0);
   static const Color softGray = Color(0xFFF4F4F4);
   static const Color lightGray = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:japa_quest/src/features/authentication/screens/login_screen/widgets/login_form.dart';
 import 'package:japa_quest/src/features/authentication/screens/login_screen/widgets/login_header.dart';
 

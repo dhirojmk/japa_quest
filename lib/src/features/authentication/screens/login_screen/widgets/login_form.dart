@@ -5,7 +5,7 @@ import 'package:japa_quest/src/constants/sizes.dart';
 import 'package:japa_quest/src/constants/text_strings.dart';
 
 import '../../../../../../navigation_menu.dart';
-import '../../../../core/screens/dashboard/dashboard.dart';
+
 import '../../password_configuration/forget_password.dart';
 import '../../signup.widgets/signup.dart';
 

@@ -4,9 +4,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:japa_quest/src/features/core/screens/dashboard/dashboard.dart';
 import 'package:japa_quest/src/features/core/screens/profile/profile_menu.dart';
 import 'package:japa_quest/src/features/core/screens/subscription/subscription_page.dart';
-import 'package:japa_quest/src/features/core/screens/test/JLPT_test.dart';
-import 'package:japa_quest/src/features/core/screens/test/choose_test.dart';
-import 'package:japa_quest/src/features/core/screens/test/test_menu.dart';
+import 'package:japa_quest/src/features/core/screens/test/jlpt_test.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -35,5 +33,5 @@ class NavigationMenu extends StatelessWidget {
 }
 class NavigationController extends GetxController{
   final Rx<int> selectedIndex = 0.obs;
-  final screens =[const Dashboard(), JlptTest(),SubscriptionApp(),ProfilePageApp(),];
+  final screens =[const Dashboard(), const JlptTest(),const SubscriptionApp(),const ProfilePageApp(),];
 }

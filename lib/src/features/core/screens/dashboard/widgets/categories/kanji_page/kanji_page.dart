@@ -46,11 +46,11 @@ final wordProvider = StateNotifierProvider<WordNotifier, WordDetails>(
 );
 
 // Enum to manage language selection
-enum Language { Kanji, Kana, English }
+enum Language { kanji, kana, english }
 
 // StateNotifier to manage the selected language
 class LanguageNotifier extends StateNotifier<Language> {
-  LanguageNotifier() : super(Language.Kanji);
+  LanguageNotifier() : super(Language.kanji);
 
   void selectLanguage(Language language) {
     state = language;
@@ -172,11 +172,11 @@ class KanjiPage extends ConsumerWidget {
     // Filter words based on selected language
     List<String> getWordDetails(WordDetails word) {
       switch (selectedLanguage) {
-        case Language.Kanji:
+        case Language.kanji:
           return [word.kanji];
-        case Language.Kana:
+        case Language.kana:
           return [word.kunYomi, word.onYomi];
-        case Language.English:
+        case Language.english:
           return [word.english];
       }
     }
@@ -186,11 +186,11 @@ class KanjiPage extends ConsumerWidget {
         title: const Text('Kanji Learning'),
         centerTitle: true,
         backgroundColor:const Color(0xFFD482E8),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Row(
-              children: const [
+              children: [
                 Text('✓ 1', style: TextStyle(color: Colors.white)),
                 SizedBox(width: 10),
                 Text('✗ 1', style: TextStyle(color: Colors.white)),
@@ -267,36 +267,36 @@ class KanjiPage extends ConsumerWidget {
               // Kanji Button
               TextButton(
                 onPressed: () {
-                  ref.read(languageProvider.notifier).selectLanguage(Language.Kanji);
+                  ref.read(languageProvider.notifier).selectLanguage(Language.kanji);
                 },
                 child: Text(
                   '- Kanji',
                   style: TextStyle(
-                    color: selectedLanguage == Language.Kanji ? Colors.blue : Colors.grey,
+                    color: selectedLanguage == Language.kanji ? Colors.blue : Colors.grey,
                   ),
                 ),
               ),
               // Kana Button
               TextButton(
                 onPressed: () {
-                  ref.read(languageProvider.notifier).selectLanguage(Language.Kana);
+                  ref.read(languageProvider.notifier).selectLanguage(Language.kana);
                 },
                 child: Text(
                   'Kana',
                   style: TextStyle(
-                    color: selectedLanguage == Language.Kana ? Colors.blue : Colors.grey,
+                    color: selectedLanguage == Language.kana ? Colors.blue : Colors.grey,
                   ),
                 ),
               ),
               // English Button
               TextButton(
                 onPressed: () {
-                  ref.read(languageProvider.notifier).selectLanguage(Language.English);
+                  ref.read(languageProvider.notifier).selectLanguage(Language.english);
                 },
                 child: Text(
                   'English',
                   style: TextStyle(
-                    color: selectedLanguage == Language.English ? Colors.blue : Colors.grey,
+                    color: selectedLanguage == Language.english ? Colors.blue : Colors.grey,
                   ),
                 ),
               ),

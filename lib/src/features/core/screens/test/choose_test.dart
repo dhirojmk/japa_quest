@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'JLPT_test.dart';
+import 'jlpt_test.dart';
 
 class ChooseTest extends StatefulWidget {
   const ChooseTest({super.key});
@@ -62,12 +62,12 @@ class _ChooseTestState extends State<ChooseTest> {
                           end: Alignment.bottomLeft,
                         ),
                       ),
-                      child: Column(
+                      child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(Icons.book, size: 50, ),
-                          const SizedBox(height: 10),
-                          const Text(
+                          Icon(Icons.book, size: 50, ),
+                          SizedBox(height: 10),
+                          Text(
                             'Kccs',
                             style: TextStyle(
                               fontSize: 18,
@@ -90,7 +90,7 @@ class _ChooseTestState extends State<ChooseTest> {
                   },
                   child: InkWell(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>JlptTest()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const JlptTest()));
                     },
                     child: Card(
                       elevation: 6,
@@ -111,13 +111,13 @@ class _ChooseTestState extends State<ChooseTest> {
                               end: Alignment.bottomLeft,
                             ),
                         ),
-                        child: Column(
+                        child: const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Icon(Icons.language,
+                            Icon(Icons.language,
                                 size: 50, ),
-                            const SizedBox(height: 10),
-                            const Text(
+                            SizedBox(height: 10),
+                            Text(
                               'JLPT',
                               style: TextStyle(
                                 fontSize: 18,

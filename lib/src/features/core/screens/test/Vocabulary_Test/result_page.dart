@@ -90,7 +90,7 @@ class _ResultPageState extends State<ResultPage> {
         },
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10),
-          color: isSelected ? const Color(0xFFD482E8) : const Color(0xFFD482E),
+          color: isSelected ? const Color(0xFFD482E8) : const Color(0x0ffd482e),
           child: Center(
             child: Text(
               tab,

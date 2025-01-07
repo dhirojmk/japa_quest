@@ -6,11 +6,11 @@ class LessonPage extends StatefulWidget {
   final String subtitle;
 
   const LessonPage({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
     required this.subtitle,
-  }) : super(key: key);
+  });
 
   @override
   State<LessonPage> createState() => _LessonPageState();
@@ -33,12 +33,12 @@ class _LessonPageState extends State<LessonPage> {
               // Lesson title and tabs
               Text(
               widget.title,
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   Text(
                     'Content',
                     style: TextStyle(
@@ -66,7 +66,7 @@ class _LessonPageState extends State<LessonPage> {
                Text(
                  widget.subtitle
              ,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               const Text(

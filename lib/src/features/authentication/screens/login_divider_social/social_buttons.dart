@@ -17,7 +17,7 @@ class TSocialButtons extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: TColors.Gray),
+              border: Border.all(color: TColors.gray),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             onPressed: () {},

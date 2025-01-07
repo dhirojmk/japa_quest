@@ -43,7 +43,7 @@ class _JlptTestState extends State<JlptTest> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context); // Navigate back to the previous screen
           },
@@ -67,9 +67,9 @@ class _JlptTestState extends State<JlptTest> {
                   value: selectedLevel,
                   items: jlptLevels
                       .map((level) => DropdownMenuItem(
-                    value: level["title"],
-                    child: Text(level["title"]!),
-                  ))
+                            value: level["title"],
+                            child: Text(level["title"]!),
+                          ))
                       .toList(),
                   onChanged: (value) {
                     setState(() {
@@ -97,47 +97,46 @@ class _JlptTestState extends State<JlptTest> {
                 itemBuilder: (context, index) {
                   final level = jlptLevels[index];
                   return InkWell(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => TestPage()));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          const Color(0xFFF3E5F5),
-                          const Color(0xFFF3E5F5).withOpacity(0.7)
-                        ],
-                        begin: Alignment.topRight,
-                        end: Alignment.bottomLeft,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TestPage()));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color(0xFFF3E5F5),
+                            const Color(0xFFF3E5F5).withOpacity(0.7)
+                          ],
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      borderRadius: BorderRadius.circular(12),
-
-                    ),
-                    margin: const EdgeInsets.symmetric(vertical: 8),
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(level["image"]!),
-                      ),
-                      title: Text(
-                        level["title"]!,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-
+                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage(level["image"]!),
+                        ),
+                        title: Text(
+                          level["title"]!,
+                          style: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(
+                          level["description"]!,
+                          style: const TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      subtitle: Text(
-                        level["description"]!,
-                        style: const TextStyle(
-                          fontSize: 12,
-
-                        ),
-                      ),
                     ),
-                  ),
                   );
-
                 },
               ),
             ),

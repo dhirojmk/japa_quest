@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:japa_quest/src/constants/sizes.dart';
 
 import '../../../../constants/image_strings.dart';

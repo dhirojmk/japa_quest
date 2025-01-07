@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(SubscriptionApp());
+  runApp(const SubscriptionApp());
 }
 
 class SubscriptionApp extends StatelessWidget {
+  const SubscriptionApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: SubscriptionPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -15,6 +17,8 @@ class SubscriptionApp extends StatelessWidget {
 }
 
 class SubscriptionPage extends StatelessWidget {
+  const SubscriptionPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final TextTheme txtTheme = Theme.of(context).textTheme;
@@ -35,7 +39,7 @@ class SubscriptionPage extends StatelessWidget {
             // Offer Section
             Container(
               color: Colors.yellow[100],
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -60,7 +64,7 @@ class SubscriptionPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text('Apply Coupon', style: txtTheme.titleMedium?.copyWith(color: Colors.blueAccent)),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       ElevatedButton(
                         onPressed: () {
                           // Handle apply action
@@ -145,7 +149,7 @@ class SubscriptionPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
+            Text(title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
             const SizedBox(height: 8),
             Text(days, style: TextStyle(fontSize: 16, color: Colors.grey[600])),
             const SizedBox(height: 8),
@@ -162,11 +166,11 @@ class SubscriptionPage extends StatelessWidget {
                 ),
                 Text(
                   discountedPrice,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
                 ),
                 Text(
                   'You Save $savings',
-                  style: TextStyle(fontSize: 16, color: Colors.green),
+                  style: const TextStyle(fontSize: 16, color: Colors.green),
                 ),
               ],
             ),
@@ -177,7 +181,7 @@ class SubscriptionPage extends StatelessWidget {
                 children: [
                   const Icon(Icons.check, color: Colors.green, size: 16),
                   const SizedBox(width: 8),
-                  Expanded(child: Text(feature, style: TextStyle(fontSize: 14))),
+                  Expanded(child: Text(feature, style: const TextStyle(fontSize: 14))),
                 ],
               ),
             )),

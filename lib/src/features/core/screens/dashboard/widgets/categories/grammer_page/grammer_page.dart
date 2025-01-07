@@ -48,14 +48,14 @@ class GrammarPage extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   hintText: "Find grammar",
-                  hintStyle: TextStyle(color: Colors.grey),
+                  hintStyle: const TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20.0),
                     borderSide: BorderSide.none,
                   ),
                   filled: true,
                   fillColor: Colors.white,
-                  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 ),
               ),
             ),

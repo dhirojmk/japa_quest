@@ -3,8 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart'; // Import Riverpod
 import 'package:get/get_navigation/src/root/get_material_app.dart'; // Import GetX
 import 'package:japa_quest/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
 
-import 'navigation_menu.dart';
-
 void main() => runApp(const ProviderScope(child: MyApp()));
 
 class MyApp extends StatefulWidget {

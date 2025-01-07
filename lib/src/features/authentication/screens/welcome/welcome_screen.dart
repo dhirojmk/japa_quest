@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -9,8 +7,6 @@ import 'package:japa_quest/src/constants/image_strings.dart';
 import 'package:japa_quest/src/constants/sizes.dart';
 import 'package:japa_quest/src/constants/text_strings.dart';
 import 'package:japa_quest/src/features/authentication/screens/login_screen/login_screen.dart';
-
-import '../../../core/screens/dashboard/dashboard.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -65,7 +61,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       style: Theme.of(context)
                           .textTheme
                           .headlineMedium
-                          ?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                          ?.copyWith(
+                              color: Colors.white, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(
@@ -90,7 +87,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0)),
-                          padding: const EdgeInsets.symmetric(vertical: tButtonHeight),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: tButtonHeight),
                           backgroundColor: TColors.accent,
                           elevation: 5.0,
                           shadowColor: TColors.accent.withOpacity(0.5),
@@ -113,14 +111,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       onPressed: () {
                         // Add action for icon button
                       },
-                      icon: const Icon(Iconsax.instagram_copy, color: Colors.white),
+                      icon: const Icon(Iconsax.instagram_copy,
+                          color: Colors.white),
                     ),
                     const SizedBox(width: 20.0),
                     IconButton(
                       onPressed: () {
                         // Add action for icon button
                       },
-                      icon: const Icon(Iconsax.facebook_copy, color: Colors.white),
+                      icon: const Icon(Iconsax.facebook_copy,
+                          color: Colors.white),
                     ),
                   ],
                 )

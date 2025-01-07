@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:japa_quest/src/constants/text_strings.dart';
 
 import '../../../../constants/colors.dart';
@@ -24,7 +24,7 @@ final String dividerText;
         ),
         Text(orSignInWith,
             style: Theme.of(context).textTheme.labelMedium),
-        Flexible(
+        const Flexible(
           child: Divider(
             color:  TColors.darkGray ,
             thickness: 0.5,

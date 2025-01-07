@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 class OnBoardingModel{
   final String image;
   final String title;

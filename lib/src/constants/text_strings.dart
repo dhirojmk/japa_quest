@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
   // Geniric Text
  const String tLogin = "Begin Your Journey";
  const String tSignUp = "SignUp";

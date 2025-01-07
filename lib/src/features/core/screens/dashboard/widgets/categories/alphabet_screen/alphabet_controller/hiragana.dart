@@ -16,6 +16,8 @@ class HiraganaChart extends StatelessWidget {
     ['ぱ', 'pa'], ['ぴ', 'pi'], ['ぷ', 'pu'], ['ぺ', 'pe'], ['ぽ', 'po']
   ];
 
+  HiraganaChart({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Get the screen width to calculate the number of columns dynamically
